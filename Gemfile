@@ -40,4 +40,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
 gem 'unirest', '~> 1.1', '>= 1.1.2'
+
+# Include JWT gem so that we can encode and decode JSON Web Tokens
+gem 'jwt'
+

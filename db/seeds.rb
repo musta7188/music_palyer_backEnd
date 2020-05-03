@@ -34,15 +34,3 @@ response = Unirest.get "https://deezerdevs-deezer.p.rapidapi.com/editorial/#{i}/
 end 
   
 
-
-u1 = User.create(name: "user1", password: "test1")
-
-s1 = Song.all.sample
-s2 = Song.all.sample
-
-p1 = Playlist.create(name:"playslist1", user_id: u1.id)
-# p2 = Playlist.create(name:"playslist2", user_id: u1)
-
-ps1 = PlaylistSong.create(playlist_id: p1.id, song_id: s1.id)
-ps2 = PlaylistSong.create(playlist_id: p1.id, song_id: s2.id)
-
