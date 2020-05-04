@@ -25,7 +25,7 @@ response = Unirest.get "https://deezerdevs-deezer.p.rapidapi.com/editorial/#{i}/
         p album = response.body["tracks"]["data"][i]["album"]["title"]
         p artist_img = response.body["tracks"]["data"][i]["artist"]["picture"]
         p album_img = response.body["tracks"]["data"][i]["album"]["cover"]
-        p link = response.body["tracks"]["data"][i]["link"]
+        p link = response.body["tracks"]["data"][i]["preview"]
         Song.create(title: title, artist: artist, album: album, artist_img: artist_img, album_img: album_img, song_link: link)
         i+=1
   

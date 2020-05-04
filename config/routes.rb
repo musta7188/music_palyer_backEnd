@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   post "/log-in", to: "users#log_in"
   get "/validate", to: "users#validate"
-
+  
 
 end
