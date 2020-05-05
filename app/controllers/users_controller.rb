@@ -4,14 +4,19 @@ class UsersController < ApplicationController
 
     def index
         users = User.all 
-        render json: users 
+        render json: users, include: [:playlists] 
     end 
 
      def create
        user = User.create(username: params[:username], password: params[:password])
-       render json: user
+       render json: { username: user.username, token: generate_token(id: user.id) }
     end
      
+    def show 
+        user = User.find(params[:id])
+        render json: user, include: [:playlist]
+    end 
+
     def log_in
         
         user = User.find_by(username: params[:username])
