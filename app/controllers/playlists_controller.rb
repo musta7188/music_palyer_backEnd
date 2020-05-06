@@ -4,12 +4,12 @@ class PlaylistsController < ApplicationController
         
         # playlists = Playlist.where(user_id: current_user.id)
         playlists = current_user.playlists
-        render json: playlists
+        render json: playlists, include: [:songs]
     end 
     
     def show 
         playlist = Playlist.find(params[:id])
-        render json: playlist
+        render json: playlist, include: [:songs]
     end
     
     def create
