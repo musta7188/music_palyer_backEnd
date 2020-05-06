@@ -8,3 +8,6 @@ class CreatePlaylistSongs < ActiveRecord::Migration[6.0]
     end
   end
 end
+
+
+# post request creata song => respons obj of a song with id...we need use the id we get back and andotehr post reqyest to the palystyst song id of the playlist and song

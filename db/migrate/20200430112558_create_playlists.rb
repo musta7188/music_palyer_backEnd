@@ -3,7 +3,6 @@ class CreatePlaylists < ActiveRecord::Migration[6.0]
     create_table :playlists do |t|
       t.string :name
 
-
       t.integer :user_id
 
       t.timestamps
