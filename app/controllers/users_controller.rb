@@ -8,8 +8,12 @@ class UsersController < ApplicationController
     end 
 
      def create
-       user = User.create(username: params[:username], password: params[:password])
+       user = User.new(username: params[:username], password: params[:password])
+       if user.save
        render json: { username: user.username, token: generate_token(id: user.id) }
+       else 
+        render json: {error: user.errors.full_messages}
+       end
     end
      
     def show 
@@ -22,8 +26,8 @@ class UsersController < ApplicationController
         user = User.find_by(username: params[:username])
         if user && user.authenticate(params[:password])
           render json: { username: user.username, token: generate_token(id: user.id) }
-        else
-          render json: { error: "Username or Password is invalid "}
+       else 
+          render json: { error: "invalid credential try again"}
         end
       end
 
