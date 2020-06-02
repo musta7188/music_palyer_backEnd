@@ -21,7 +21,6 @@ class SongsController < ApplicationController
     song.destroy
     render json: song
 end 
-
   private 
 
   def song_params 
