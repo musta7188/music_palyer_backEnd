@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: Mod4MusicPlayerBackend_production
-  username: Mod4MusicPlayerBackend
-  password: <%= ENV['MOD4MUSICPLAYERBACKEND_DATABASE_PASSWORD'] %>
+  database: <%= ENV['DATABASE_URL'] %>
+  # username: Mod4MusicPlayerBackend
+  # password: <%= ENV['MOD4MUSICPLAYERBACKEND_DATABASE_PASSWORD'] %>
