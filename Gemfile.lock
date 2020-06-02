@@ -77,10 +77,10 @@ GEM
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     json (1.8.6)
-<<<<<<< HEAD
-=======
+
+
     json (1.8.6-java)
->>>>>>> 96ed2d2c499b8a1498f2b5bb48fa3495d8c4555b
+
     jwt (2.2.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
